@@ -2,11 +2,34 @@
 
 {% block resume %}  
     <div id="main" class="grid w-full grid-cols-1 gap-4 mx-auto md:grid-cols-5 md:w-4/5">
-        <div class="w-screen h-full col-span-2 mx-auto bg-blue-800 md:w-auto white-text " />
+        <div class="w-screen h-full col-span-2 mx-auto bg-blue-500 md:w-auto white-text " />
             {% include "./components/info.html" %}
         </div>
         <div class="col-span-3 dark-text"  />
             {% include "./components/course.html" %}
         </div>
     </div>
+    <div >
+          <div class="bg-blue-400 p-8 mt-5 flex items-center">
+            <div class="bg-white p-10 md:w-2/3 lg:w-1/2 mx-auto rounded">
+              <div id="form">
+                <div id="message"></div>
+                <div id="error"></div>
+                <div class="flex items-center mb-5">
+                  <label for="email" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Email</label>
+                  <input required name="email" id="email" type="email" placeholder="Edit your email" class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+                </div>
+         
+                <div class="flex items-center mb-10">
+                  <label for="name" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Name</label>
+                  <input required type="text" name="name" id="name" placeholder="Edit your Name" class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+                </div>
+                <div class="text-right">
+                  <button class="py-3 px-8 bg-blue-500 text-green-100 font-bold rounded" onclick="submit()">Submit</button>
+                </div>
+            </div>
+            </div>
+          </div>
+    </div>
+
 {% endblock %}

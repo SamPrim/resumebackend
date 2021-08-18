@@ -13,4 +13,32 @@
 <body>
     {% block resume %}{% endblock %}
 </body>
+
+<script>
+    function setInfo(){
+        document.getElementById("fullname").innerHTML = localStorage.getItem("name") ? localStorage.getItem("name"): "NDO SAMY STEPHAN"
+        document.getElementById("fullname_course").innerHTML = localStorage.getItem("name") ? localStorage.getItem("name"):"NDO SAMY STEPHAN"
+        document.getElementById("email").innerHTML = localStorage.getItem("email") ? localStorage.getItem("email"):"ndoprime@gmail.com";
+    }
+    setInfo();
+
+    function submit(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        console.log(email?email:'error')
+        if(name && email){
+            document.getElementById("message").innerHTML = '<div class="bg-green-100 border border-red-400 text-green-700 px-4 py-3 mb-4 rounded relative" role="alert"><span  class="block sm:inline">Error, field required</span></div> ';
+            document.getElementById("error").innerHTML = '';
+       
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+         }
+        else{
+            document.getElementById("error").innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 rounded relative" role="alert"><span  class="block sm:inline">Error</span></div> ';
+            document.getElementById("message").innerHTML = ' ';
+        }
+        setInfo();
+    };
+    
+</script>
 </html>
