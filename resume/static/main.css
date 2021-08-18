@@ -1,0 +1,15 @@
+.dark-text{
+    color: #3c3c3c;
+  }
+  .white-text{
+    color: #e1e5e9;
+  }
+
+  .card{
+    border-radius: 4px;
+    box-shadow: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(223, 222, 222);
+    background-color: rgb(253, 253, 253)
+}

@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from resume.views import ResumePage
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+
+    # route for resume page
+    path('', ResumePage, name="resume-page"),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
