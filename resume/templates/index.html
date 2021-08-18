@@ -25,9 +25,9 @@
     function submit(){
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
-        console.log(email?email:'error')
-        if(name && email){
-            document.getElementById("message").innerHTML = '<div class="bg-green-100 border border-red-400 text-green-700 px-4 py-3 mb-4 rounded relative" role="alert"><span  class="block sm:inline">Error, field required</span></div> ';
+        console.log(email)
+        if(name !="" && email!=""){
+            document.getElementById("message").innerHTML = '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 rounded relative" role="alert"><span  class="block sm:inline">Succesful</span></div> ';
             document.getElementById("error").innerHTML = '';
        
             localStorage.setItem("name", name);
